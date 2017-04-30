@@ -1,0 +1,6 @@
+---
+# handlers file for r1soft
+- name: r1soft server
+  service: 
+    name: cdp-agent 
+    state: restarted

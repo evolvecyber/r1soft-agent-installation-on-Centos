@@ -1,0 +1,4 @@
+---
+- name: Update kernel
+  yum: name=kernel state=latest
+...

@@ -1,0 +1,11 @@
+---
+# tasks file for r1soft
+- name: Copy files
+  copy:
+    src: r1soft.repo 
+    dest: /etc/yum.repos.d 
+- name: Install backup server
+  yum: 
+    name: serverbackup-enterprise-agent 
+    state: present
+  notify: r1soft server

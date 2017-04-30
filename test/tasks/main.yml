@@ -1,0 +1,15 @@
+---
+- name: Add string to motd
+  copy:   #Copy works with files that is why no need to define folder here. 
+    src: motd
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Installing httpd
+  yum: 
+    name: "{{ webserver }}" #This is how you give variable instead of name 
+    state: latest
+
+...
